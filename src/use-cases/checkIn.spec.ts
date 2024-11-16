@@ -1,21 +1,50 @@
-import { inMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository"
-import { CheckInUseCase } from "@/use-cases/checkIn"
-import { randomUUID } from "crypto"
-import { beforeEach, describe, expect, it } from "vitest"
+import { inMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
+import { CheckInUseCase } from '@/use-cases/checkIn'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 let checkInsRepository: inMemoryCheckInsRepository
 let sut: CheckInUseCase
-describe("Check-in Use Case", () => {
+describe('Check-in Use Case', () => {
   beforeEach(() => {
     checkInsRepository = new inMemoryCheckInsRepository()
     sut = new CheckInUseCase(checkInsRepository)
+    vi.useFakeTimers()
   })
-  it("should be able to check in", async () => {
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+  it('should be able to check in', async () => {
     const { checkIn } = await sut.execute({
-      gymId: randomUUID(),
-      userId: randomUUID(),
+      gymId: 'gym-01',
+      userId: 'user-01',
     })
-
+    expect(checkIn.id).toEqual(expect.any(String))
+  })
+  it('should not be able to check in twice in the same day', async () => {
+    vi.setSystemTime(new Date(2024, 10, 20, 8, 0, 0))
+    const { checkIn } = await sut.execute({
+      gymId: 'gym-01',
+      userId: 'user-01',
+    })
+    console.log(checkIn.created_at)
+    await expect(() =>
+      sut.execute({
+        gymId: 'gym-01',
+        userId: 'user-01',
+      })
+    ).rejects.toBeInstanceOf(Error)
+  })
+  it('should be able to check in twice in different days', async () => {
+    vi.setSystemTime(new Date(2024, 10, 20, 8, 0, 0))
+    await sut.execute({
+      gymId: 'gym-01',
+      userId: 'user-01',
+    })
+    vi.setSystemTime(new Date(2024, 10, 21, 8, 0, 0))
+    const { checkIn } = await sut.execute({
+      gymId: 'gym-01',
+      userId: 'user-01',
+    })
     expect(checkIn.id).toEqual(expect.any(String))
   })
 })
