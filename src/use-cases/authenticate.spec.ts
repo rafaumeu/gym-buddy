@@ -5,12 +5,12 @@ import { InvalidCredentialsError } from "@/use-cases/errors/invalid-credential-e
 import { hash } from "bcryptjs"
 import { beforeEach, describe, expect, it } from "vitest"
 
-let authenticateUseCase: AuthenticateUseCase
+let sut: AuthenticateUseCase
 let usersRepository: UsersRepository
 describe("Authenticate Use Case", () => {
   beforeEach(() => {
     usersRepository = new inMemoryUsersRepository()
-    authenticateUseCase = new AuthenticateUseCase(usersRepository)
+    sut = new AuthenticateUseCase(usersRepository)
   })
   it("should be able to authenticate", async () => {
     await usersRepository.create({
@@ -18,7 +18,7 @@ describe("Authenticate Use Case", () => {
       email: "johndoe@example.com",
       password_hash: await hash("123456", 6),
     })
-    const { user } = await authenticateUseCase.execute({
+    const { user } = await sut.execute({
       email: "johndoe@example.com",
       password: "123456",
     })
@@ -27,7 +27,7 @@ describe("Authenticate Use Case", () => {
   })
   it("should not be able to authenticate with wrong email", async () => {
     await expect(
-      authenticateUseCase.execute({
+      sut.execute({
         email: "wrongemail@example.com",
         password: "123456",
       })
@@ -40,7 +40,7 @@ describe("Authenticate Use Case", () => {
       password_hash: await hash("123456", 6),
     })
     await expect(
-      authenticateUseCase.execute({
+      sut.execute({
         email: "johndoe@example.com",
         password: "wrongpassword",
       })

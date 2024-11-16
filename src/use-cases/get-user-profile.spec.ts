@@ -26,7 +26,7 @@ describe("Authenticate Use Case", () => {
     expect(user.name).toEqual("John Doe")
   })
   it("should not be able to get user profile with non-existent user", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: "non-existent-user-id",
       })
