@@ -3,6 +3,9 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Node.js Version](https://img.shields.io/badge/node.js-v16.0.0-green)
+![PostgreSQL Version](https://img.shields.io/badge/postgresql-v13.0-blue)
+![TypeScript Version](https://img.shields.io/badge/typescript-v4.0.0-blue)
 
 ## Descrição do Projeto
 
@@ -26,7 +29,7 @@ Nosso objetivo é facilitar a vida de quem deseja se exercitar, tornando a busca
 - [X] Deve ser possível obter o perfil de um usuário logado;
 - [X] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
 - [X] Deve ser possível o usuário obter o seu histórico de check-ins;
-- [ ] Deve ser possível o usuário buscar academias próximas;
+- [X] Deve ser possível o usuário buscar academias próximas (até 10km);
 - [X] Deve ser possível o usuário buscar academias pelo nome;
 - [X] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
