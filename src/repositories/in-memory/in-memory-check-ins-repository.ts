@@ -5,14 +5,17 @@ import { randomUUID } from 'node:crypto'
 
 export class inMemoryCheckInsRepository implements CheckInsRepository {
   public items: CheckIn[] = []
-  async findByUserIdOnDate(user: string, date: Date): Promise<CheckIn | null> {
+  async findByUserIdOnDate(
+    userId: string,
+    date: Date
+  ): Promise<CheckIn | null> {
     const startOfTheDay = dayjs(date).startOf('date')
     const endOfTheDay = dayjs(date).endOf('date')
     const checkOnSameDate = this.items.find((checkIn) => {
       const checkInDate = dayjs(checkIn.created_at)
       const isOnSameDate =
         checkInDate.isAfter(startOfTheDay) && checkInDate.isBefore(endOfTheDay)
-      return checkIn.user_id === user && isOnSameDate
+      return checkIn.user_id === userId && isOnSameDate
     })
     if (!checkOnSameDate) {
       return null
