@@ -1,89 +1,82 @@
 # Gym Buddy
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Node.js Version](https://img.shields.io/badge/node.js-v16.0.0-green)
-![PostgreSQL Version](https://img.shields.io/badge/postgresql-v13.0-blue)
-![TypeScript Version](https://img.shields.io/badge/typescript-v4.0.0-blue)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Node.js Version](https://img.shields.io/badge/node.js-v16.0.0-green)  ![PostgreSQL Version](https://img.shields.io/badge/postgresql-v13.0-blue)  ![TypeScript Version](https://img.shields.io/badge/typescript-v4.0.0-blue)
 
-## Descrição do Projeto
+## Project Description
 
-O **Gym Buddy** é uma aplicação inovadora que conecta usuários a academias, proporcionando uma experiência fluida e prática para quem busca manter a forma. Com funcionalidades que permitem o registro de usuários, autenticação, busca por academias, check-ins e muito mais, este projeto foi desenvolvido com foco em eficiência e usabilidade.
+**Gym Buddy** is an innovative application that connects users to gyms, offering a seamless and practical experience for those seeking to stay fit. With features allowing user registration, authentication, gym search, check-ins, and much more, this project is focused on efficiency and usability.
 
-Nosso objetivo é facilitar a vida de quem deseja se exercitar, tornando a busca por academias mais acessível e a gestão de check-ins mais organizada.
+Our goal is to simplify the lives of those wanting to exercise by making it easier to find gyms and manage check-ins.
 
-## Funcionalidades Principais
+## Key Features
 
-- **Cadastro de Usuários**: Permite que novos usuários se registrem na plataforma com um e-mail único.
-- **Autenticação Segura**: Garantia de que apenas usuários registrados possam acessar suas informações.
-- **Perfil do Usuário**: Usuários podem visualizar e gerenciar seu perfil, incluindo histórico de check-ins.
-- **Busca por Academias**: Usuários podem buscar academias próximas ou por nome.
-- **Check-ins**: Realização de check-ins em academias com validação de distância.
-- **Histórico de Check-ins**: Acompanhamento do histórico de check-ins realizados pelo usuário.
+- **User Registration**: Allows new users to register with a unique email.
+- **Secure Authentication**: Ensures that only registered users can access their information.
+- **User Profile**: Users can view and manage their profile, including their check-in history.
+- **Gym Search**: Users can search for nearby gyms or search by name.
+- **Check-ins**: Users can check in at gyms with distance validation.
+- **Check-in History**: Tracks the history of check-ins made by the user.
 
-## RFs (Requisitos Funcionais)
+## Functional Requirements (RFs)
 
-- [X] Deve ser possível se cadastrar;
-- [X] Deve ser possível se autenticar;
-- [X] Deve ser possível obter o perfil de um usuário logado;
-- [X] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
-- [X] Deve ser possível o usuário obter o seu histórico de check-ins;
-- [X] Deve ser possível o usuário buscar academias próximas (até 10km);
-- [X] Deve ser possível o usuário buscar academias pelo nome;
-- [X] Deve ser possível o usuário realizar check-in em uma academia;
-- [X] Deve ser possível validar o check-in de um usuário;
-- [X] Deve ser possível cadastrar uma academia;
+- [X] Users must be able to register.
+- [X] Users must be able to authenticate.
+- [X] Users must be able to access their logged-in profile.
+- [X] Users must be able to view the number of check-ins they’ve made.
+- [X] Users must be able to access their check-in history.
+- [X] Users must be able to search for gyms within 10 km.
+- [X] Users must be able to search gyms by name.
+- [X] Users must be able to check in at a gym.
+- [X] Check-ins must be validated for users.
+- [X] Users must be able to register a gym.
 
-## RNs (Regras de Negócio)
+## Business Rules (RNs)
 
-- [X] O usuário não deve poder se cadastrar com um e-mail duplicado;
-- [X] O usuário não pode fazer 2 check-ins no mesmo dia;
-- [X] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
-- [X] O check-in só pode ser validado até 20 minutos após ser criado;
-- [ ] O check-in só pode ser validado por administradores;
-- [ ] A academia só pode ser cadastrada por administradores;
+- [X] Users cannot register with a duplicate email.
+- [X] Users cannot check in more than once on the same day.
+- [X] Users cannot check in if they are not within 100 meters of the gym.
+- [X] Check-ins can only be validated within 20 minutes after being created.
+- [ ] Check-ins can only be validated by administrators.
+- [ ] Gyms can only be registered by administrators.
 
-## RNFs (Requisitos Não-Funcionais)
+## Non-Functional Requirements (RNFs)
 
-- [X] A senha do usuário precisa estar criptografada;
-- [X] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
-- [X] Todas listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [X] User passwords must be encrypted.
+- [X] Data must be persisted in a PostgreSQL database.
+- [X] All data lists must be paginated with 20 items per page.
+- [ ] Users must be identified by a JWT (JSON Web Token).
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Node.js**: Plataforma de desenvolvimento.
-- **Fastify**: Framework web para construção de APIs.
-- **Prisma**: ORM para interagir com o banco de dados PostgreSQL.
-- **TypeScript**: Linguagem de programação que traz tipagem estática ao JavaScript.
-- **Vitest**: Framework de testes para garantir a qualidade do código.
+- **Node.js**: Development platform.
+- **Fastify**: Web framework for building APIs.
+- **Prisma**: ORM for interacting with the PostgreSQL database.
+- **TypeScript**: Programming language that brings static typing to JavaScript.
+- **Vitest**: Testing framework to ensure code quality.
 
-## Como Contribuir
+## How to Contribute
 
-1. Faça um fork deste repositório.
-2. Crie uma branch para sua feature (`git checkout -b feature/nome-da-feature`).
-3. Faça as alterações e commit (`git commit -m 'Adiciona nova funcionalidade'`).
-4. Envie para o repositório remoto (`git push origin feature/nome-da-feature`).
-5. Abra um Pull Request.
+1. Fork this repository.
+2. Create a branch for your feature (`git checkout -b feature/feature-name`).
+3. Make your changes and commit (`git commit -m 'Add new feature'`).
+4. Push to the remote repository (`git push origin feature/feature-name`).
+5. Open a Pull Request.
 
-## Licença
+## License
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ---
 
-## Publicação Prévia
+## Preliminary Release
 
-### Publicação Prévia do Gym Buddy
+### Current Phase: Use Case Development
 
-**Fase Atual**: Desenvolvimento de Casos de Uso
+### Objective: Create a robust API that meets the needs of users seeking gyms and managing check-ins.
 
-**Objetivo**: Criar uma API robusta que atenda às necessidades dos usuários em busca de academias e controle de check-ins.
+### Use Cases Implemented So Far
 
-### Casos de Uso Implementados até Agora
-
-- **Registro de Usuário**: Implementado com validação de e-mail único.
-- **Autenticação de Usuário**: Garantindo a segurança dos dados dos usuários.
-- **Busca por Academias**: Funcionalidade que permite a busca por academias próximas e por nome.
-- **Check-in em Academias**: Implementação da lógica de check-in
+- **User Registration**: Implemented with unique email validation.
+- **User Authentication**: Ensuring user data security.
+- **Gym Search**: Functionality allowing the search for nearby gyms and by name.
+- **Gym Check-in**: Check-in logic implementation.
