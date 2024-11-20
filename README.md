@@ -1,11 +1,6 @@
 # Gym Buddy
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)  
-![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)  
-![Version](https://img.shields.io/badge/version-1.0.0-blue)  
-![Node.js Version](https://img.shields.io/badge/node.js-v16.0.0-green)  
-![PostgreSQL Version](https://img.shields.io/badge/postgresql-v13.0-blue)  
-![TypeScript Version](https://img.shields.io/badge/typescript-v4.0.0-blue)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Node.js Version](https://img.shields.io/badge/node.js-v16.0.0-green)  ![PostgreSQL Version](https://img.shields.io/badge/postgresql-v13.0-blue)  ![TypeScript Version](https://img.shields.io/badge/typescript-v4.0.0-blue)
 
 ## Project Description
 
