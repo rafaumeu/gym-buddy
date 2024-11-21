@@ -38,10 +38,12 @@
   "dependencies": {
     "@fastify/jwt": "6.7.0",
     "@prisma/client": "4.10.1",
+    "@types/supertest": "6.0.2",
     "bcryptjs": "2.4.3",
     "dayjs": "1.11.13",
     "dotenv": "16.4.5",
     "fastify": "4.13.0",
+    "supertest": "6.3.3",
     "zod": "3.23.8"
   }
 }
