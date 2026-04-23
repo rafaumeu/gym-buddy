@@ -92,7 +92,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/gym-buddy
+git clone https://github.com/rafaumeu/gym-buddy
 cd gym-buddy
 
 # Install dependencies
@@ -152,5 +152,5 @@ MIT License - Feel free to use this project as you wish!
 ---
 
 <p align="center">
-  Made with 💪 by <a href="https://github.com/yourusername">Rafael dias Zendron</a>
+  Made with 💪 by <a href="https://github.com/rafaumeu">Rafael Dias Zendron</a>
 </p>
