@@ -8,13 +8,13 @@
 
 ## Badges
 
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?logo=typescript&logoColor=white)
-![Fastify](https://img.shields.io/badge/Fastify-4.x-000000?logo=fastify&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-Unit%20%2B%20E2E-6E9F18?logo=vitest&logoColor=white)
-![Clean Architecture](https://img.shields.io/badge/Clean_Architecture-SOLID-brightgreen)
-![DDD](https://img.shields.io/badge/DDD-Domain_Driven-9B59B6)
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.0+-3178C6?logo=typescript&logoColor=white"/>
+<img alt="Fastify" src="https://img.shields.io/badge/Fastify-4.x-000000?logo=fastify&logoColor=white"/>
+<img alt="Prisma" src="https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma&logoColor=white"/>
+<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white"/>
+<img alt="Vitest" src="https://img.shields.io/badge/Vitest-Unit%20%2B%20E2E-6E9F18?logo=vitest&logoColor=white"/>
+<img alt="Clean Architecture" src="https://img.shields.io/badge/Clean_Architecture-SOLID-brightgreen"/>
+<img alt="DDD" src="https://img.shields.io/badge/DDD-Domain_Driven-9B59B6"/>
 
 ---
 
