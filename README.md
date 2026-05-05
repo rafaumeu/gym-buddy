@@ -2,7 +2,7 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=180&section=header&text=Gym%20Buddy&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Clean%20Architecture%20%7C%20DDD%20%7C%20Gamification&descSize=18&descAlignY=52"/>
 
-[![Use this template](https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu/gym-buddy/generate)
+<a href="https://github.com/rafaumeu/gym-buddy/generate"><img src="https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white" alt="Use this template"/></a>
 
 </div>
 
