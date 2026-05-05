@@ -48,6 +48,11 @@ export class inMemoryCheckInsRepository implements CheckInsRepository {
     }
     return checkIn
   }
+  async findCheckInsDatesByUserId(userId: string): Promise<Date[]> {
+    return this.items
+      .filter((item) => item.user_id === userId)
+      .map((item) => item.created_at)
+  }
   async save(checkIn: CheckIn): Promise<CheckIn> {
     const checkInIndex = this.items.findIndex((item) => item.id === checkIn.id)
     if (checkInIndex >= 0) {

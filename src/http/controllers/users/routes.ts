@@ -2,6 +2,7 @@ import { refresh } from '@/http/controllers/users/refresh'
 import { verifyJwt } from '@/http/middlewares/verify-jwt'
 import { FastifyInstance } from 'fastify'
 import { authenticate } from './authenticate'
+import { gamification } from './gamification'
 import { profile } from './profile'
 import { register } from './register'
 
@@ -10,4 +11,5 @@ export async function usersRoutes(app: FastifyInstance) {
   app.post('/sessions', authenticate)
   app.patch('/token/refresh', refresh)
   app.get('/me', { onRequest: [verifyJwt] }, profile)
+  app.get('/me/gamification', { onRequest: [verifyJwt] }, gamification)
 }
