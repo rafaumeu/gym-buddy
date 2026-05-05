@@ -53,6 +53,20 @@ export class PrismaCheckInsRepository implements CheckInsRepository {
     })
     return checkIns
   }
+  async findCheckInsDatesByUserId(userId: string): Promise<Date[]> {
+    const checkIns = await prisma.checkIn.findMany({
+      where: {
+        user_id: userId,
+      },
+      select: {
+        created_at: true,
+      },
+      orderBy: {
+        created_at: 'asc',
+      },
+    })
+    return checkIns.map((checkIn) => checkIn.created_at)
+  }
   async save(data: CheckIn): Promise<CheckIn> {
     const checkIn = await prisma.checkIn.update({
       where: {
