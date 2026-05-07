@@ -253,6 +253,25 @@ yarn test:e2e:watch     # Watch mode
 
 ---
 
+## Docker
+
+```bash
+# Start services (PostgreSQL + App)
+yarn docker:up
+
+# Stop
+yarn docker:down
+
+# Rebuild
+yarn docker:build
+```
+
+### Docker Compose Services
+- **postgres** — PostgreSQL 14 on port 5432
+- **app** — API on port 3333
+
+---
+
 ## License
 
 MIT License — feel free to use this project as a template for your own Clean Architecture backends.
