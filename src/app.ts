@@ -31,6 +31,10 @@ app.register(fastifyCookies)
 
 app.register(swaggerPlugin)
 
+app.get('/health', async () => {
+  return { status: 'ok', timestamp: new Date().toISOString() }
+})
+
 app.register(usersRoutes)
 app.register(gymsRoutes)
 app.register(checkInsRoutes)
