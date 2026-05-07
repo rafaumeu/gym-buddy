@@ -17,7 +17,7 @@ export async function gymsRoutes(app: FastifyInstance) {
     phone: z.string().nullable(),
     latitude: z.number(),
     longitude: z.number(),
-    created_at: z.string(),
+    created_at: z.date(),
   })
 
   app.get('/gyms/search', {

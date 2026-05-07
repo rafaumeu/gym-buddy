@@ -15,8 +15,8 @@ export async function checkInsRoutes(app: FastifyInstance) {
     id: z.string().uuid(),
     user_id: z.string().uuid(),
     gym_id: z.string().uuid(),
-    validated_at: z.string().nullable(),
-    created_at: z.string(),
+    validated_at: z.date().nullable(),
+    created_at: z.date(),
   })
 
   app.get('/check-ins/history', {

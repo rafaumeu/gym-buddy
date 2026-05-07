@@ -48,7 +48,7 @@ export async function usersRoutes(app: FastifyInstance) {
       tags: ['Users'],
       summary: 'Get user profile',
       security: [{ bearerAuth: [] }],
-      response: { 200: z.object({ user: z.object({ id: z.string(), name: z.string(), email: z.string(), role: z.enum(['ADMIN', 'MEMBER']), created_at: z.string() }) }) },
+      response: { 200: z.object({ user: z.object({ id: z.string(), name: z.string(), email: z.string(), role: z.enum(['ADMIN', 'MEMBER']), created_at: z.date() }) }) },
     },
   }, profile)
 
