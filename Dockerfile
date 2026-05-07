@@ -1,4 +1,4 @@
-FROM node:22-slim AS base
+FROM node:20-slim AS base
 WORKDIR /app
 
 FROM base AS deps
@@ -8,6 +8,7 @@ RUN yarn install --frozen-lockfile --production=false
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN npx prisma generate
 RUN yarn build
 
 FROM base AS runner
