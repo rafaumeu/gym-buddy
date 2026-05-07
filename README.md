@@ -2,19 +2,18 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=180&section=header&text=Gym%20Buddy&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Clean%20Architecture%20%7C%20DDD%20%7C%20Gamification&descSize=18&descAlignY=52"/>
 
-<a href="https://github.com/rafaumeu/gym-buddy/generate"><img src="https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white" alt="Use this template"/></a>
-
 </div>
 
-## Badges
-
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.0+-3178C6?logo=typescript&logoColor=white"/>
-<img alt="Fastify" src="https://img.shields.io/badge/Fastify-4.x-000000?logo=fastify&logoColor=white"/>
-<img alt="Prisma" src="https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma&logoColor=white"/>
-<img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white"/>
-<img alt="Vitest" src="https://img.shields.io/badge/Vitest-Unit%20%2B%20E2E-6E9F18?logo=vitest&logoColor=white"/>
-<img alt="Clean Architecture" src="https://img.shields.io/badge/Clean_Architecture-SOLID-brightgreen"/>
-<img alt="DDD" src="https://img.shields.io/badge/DDD-Domain_Driven-9B59B6"/>
+<p align="center">
+  <img src="https://img.shields.io/badge/Node-18+-339933?style=for-the-badge&logo=nodejs" alt="Node"/>
+  <img src="https://img.shields.io/badge/Fastify-4-000000?style=for-the-badge&logo=fastify" alt="Fastify"/>
+  <img src="https://img.shields.io/badge/TypeScript-4-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Prisma-4-2D3748?style=for-the-badge&logo=prisma" alt="Prisma"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-15+-4169E1?style=for-the-badge&logo=postgresql" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Vitest-0.28-6E9F18" alt="Vitest"/>
+  <img src="https://img.shields.io/badge/Docker-ready-2496ED?style=for-the-badge&logo=docker" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Swagger-UI-85EA2D?style=for-the-badge&logo=swagger" alt="Swagger"/>
+</p>
 
 ---
 
