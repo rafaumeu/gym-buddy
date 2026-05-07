@@ -139,6 +139,23 @@ src/
 | :--- | :--- | :--- | :---: |
 | `GET` | `/me/gamification` | Get XP, level, streaks, and badges | Yes |
 
+## API Documentation
+
+Interactive Swagger UI available at `/docs` when running the server.
+
+### Endpoints
+
+- **Auth** — `POST /users`, `POST /sessions`, `PATCH /token/refresh`, `GET /me`
+- **Check-ins** — `POST /gyms/:gymId/check-ins`, `PATCH /check-ins/:checkInId/validate`, `GET /check-ins/history`, `GET /check-ins/metrics`
+- **Gyms** — `GET /gyms/search`, `GET /gyms/nearby`, `POST /gyms`
+- **Gamification** — `GET /me/gamification`
+
+### Generate Typed Client
+
+```bash
+npx orval  # generates typed API client from OpenAPI spec
+```
+
 ---
 
 ## Tech Stack
