@@ -5,6 +5,7 @@ import { usersRoutes } from '@/http/controllers/users/routes'
 import swaggerPlugin from '@/plugins/swagger'
 import fastifyCookies from '@fastify/cookie'
 import fastifyJwt from '@fastify/jwt'
+import rateLimit from '@fastify/rate-limit'
 import fastify from 'fastify'
 import {
   serializerCompiler,
@@ -30,6 +31,8 @@ app.register(fastifyJwt, {
 app.register(fastifyCookies)
 
 app.register(swaggerPlugin)
+
+app.register(rateLimit, { max: 100, timeWindow: '1 minute' })
 
 app.get('/health', async () => {
   return { status: 'ok', timestamp: new Date().toISOString() }
