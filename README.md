@@ -301,3 +301,7 @@ MIT License — feel free to use this project as a template for your own Clean A
 Built with 💪 by [Rafael Zendron](https://github.com/rafaumeu) · [Portfolio](https://portfoliodev-blush-pi.vercel.app)
 
 </div>
+
+<p align="center">
+  <a href="https://github.com/rafaumeu/gym-buddy/generate"><img src="https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white" alt="Use this template"/></a>
+</p>
